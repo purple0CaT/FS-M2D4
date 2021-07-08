@@ -4,6 +4,7 @@ const addMem = document.getElementById('addMem')
 const clearMem = document.getElementById('clearMem')
 
 const randomMem = document.getElementById('randomMem')
+const teams = document.getElementById('teams')
 
 // Inputs random
 const memNum = document.getElementById('memb-num')
@@ -60,8 +61,9 @@ function randomThisMem(){
     numberT = teamNum.value
     let tempBase = []
 
-    for(i=0; i<numberT;i++){ //Making teams
-    // making members of team
+    for(i=0; i<numberT; i++){ //Making teams
+
+        // making members of team
         for(i=0; i<numberM; i++){
             randomaizer(memBase.length)
             while (y.includes(x) !== false){
@@ -70,20 +72,20 @@ function randomThisMem(){
             y.push(x)
             tempBase.push(memBase[x])
         }
-        
-        // teams
-        let div = document.createElement('div')
-        div.classList.add('col')
-        div.appendChild(memBaseOut)
-            for(j=0; j<tempBase.length; i++){
-                let parr = document.createElement('p')
-                parr.innerText = tempBase[j]
-            div.appendChild(parr)
-            }
-    }
 
-    tempBase = []
+        // teams
+    let div = document.createElement('div')
+    div.classList.add('col')
+    teams.appendChild(div)
+        for(j=0; j<tempBase.length; j++){
+            let parr = document.createElement('p')
+            parr.innerText = tempBase[j]
+        div.appendChild(parr)
+        }
+    }
     console.log(tempBase)
+    y =[]
+    tempBase = []
 }
 
 function randomTeam (){
