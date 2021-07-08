@@ -57,7 +57,7 @@ let y =[]
 // randoming in teams
 function randomThisMem(){
     teams.innerHTML = ''
-    
+
     numberT = teamNum.value
     let tempBase = []
     numberM = memNum.value
@@ -99,5 +99,6 @@ function randomThisMem(){
 }
 
 function randomaizer(b){
-    x = Math.round(Math.random()*(b-0)+0)
+    o = b-1
+    x = Math.round(Math.random()*(o-0)+0)
 }
