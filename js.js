@@ -80,8 +80,11 @@ function randomThisMem(){
         // teams
     let div = document.createElement('div')
     div.classList.add('col')
-    div.classList.add('bg-light')
+    div.classList.add('bg-info')
+    div.classList.add('text-white')
     div.classList.add('my-1')
+    div.classList.add('border')    
+    div.classList.add('rounded')    
 
     teams.appendChild(div)
 
