@@ -61,10 +61,11 @@ function randomThisMem(){
     numberT = teamNum.value
     let tempBase = []
     numberM = memNum.value
+    let allThis = numberT*numberM
+
+if(memBase.length >= allThis){
 
     randomaizer(memBase.length)
-
-
     for(q=0; q<numberT; q++){ //Making teams
 
         // making members of team
@@ -98,7 +99,9 @@ function randomThisMem(){
     }
     console.log(tempBase)
     y =[]
-
+} else {
+    alert('Not enough people')
+}
 }
 
 function randomaizer(b){
