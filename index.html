@@ -34,6 +34,7 @@
     />
   </head>
   <body>
+
     <!-- nav bar -->
     <nav class="navbar navbar-light px-5" style="background-color: #e3f2fd;">
         <span class="navbar-brand mb-0 h1 font-weight-light">Randomizer</span>
@@ -42,34 +43,36 @@
             <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
           </svg>
       </nav>
+
       <!-- container -->
       <div class="container ">
-        <div class="row row-cols-1 row-cols-lg-3 justify-content-between">
+        <div class="row justify-content-between">
+
             <!-- waiting list -->
-            <div class="col py-3 bg-light text-dark my-2">
+            <div class="col-12 col-md-6 py-3 bg-light text-dark my-2">
                 <h2 class="font-weight-light text-center">Waiting list</h2>
-                
-                
                 <hr>
-                <div class="members">
+                <div id="members" class="w-100">
 
                 </div>
                 <hr>
-                <form>
+                <!-- <form> -->
                     <div class="form-group">
-                        <label for="team-names">Type the team-member names</label>
-                        <textarea class="form-control" id="team-names" rows="2"></textarea>
+                        <label for="membersID">Type the team-member names</label>
+                        <textarea class="form-control" rows="2" id="membersID"></textarea>
                       </div>
                     
-                    <button type="add-mem" class="btn btn-info">Add members</button>
-                  </form>
+                    <button class="btn btn-info" id="addMem">Add members</button>
+                    <button class="btn btn-info" id="clearMem">Clear members</button>
+                  <!-- </form> -->
                 </div>
+
                 <!-- randomizer -->
-                <div class="col py-3 my-2 text-center bg-light text-dark">
+                <div class="col-12 col-md-6 py-3 my-2 text-center bg-light text-dark">
                     <h2 class="font-weight-light text-center">Randomize</h2>
                     <hr>
                     <div class="form-group">
-                    <form>
+                    <!-- <form> -->
                         <label for="memb-num">Number of members in one team</label>
                         <input type="text" class="form-control" id="memb-num" aria-describedby="emailHelp">
                       </div>
@@ -77,20 +80,17 @@
                         <label for="team-num">Number of teams</label>
                         <input type="text" class="form-control" id="team-num">
                       </div>
-                      <button type="random" class="btn btn-info">Random</button>
-                    </form>
+                      <button id="randomMem" class="btn btn-info">Random</button>
+                    <!-- </form> -->
                 </div>
+                
                 <!-- team list -->
-                <div class="col py-3 my-2 text-center bg-light text-dark">
+                <div class="col-12 py-3 my-2 text-center bg-light text-dark">
                     <h2 class="font-weight-light">Team list</h2>
                     <hr>
-                    <ul class="list-group">
-                        <li class="list-group-item">An item</li>
-                        <li class="list-group-item">A second item</li>
-                        <li class="list-group-item">A third item</li>
-                        <li class="list-group-item">A fourth item</li>
-                        <li class="list-group-item">And a fifth one</li>
-                      </ul>
+                    <div class="row row-cols-1 row-cols-md-3" id="teams">
+
+                    </div>
                 </div>
         </div>
       </div>
