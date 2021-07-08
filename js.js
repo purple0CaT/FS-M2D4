@@ -61,7 +61,7 @@ function randomThisMem(){
     numberT = teamNum.value
     let tempBase = []
 
-    for(i=0; i<numberT; i++){ //Making teams
+    for(q=0; q<numberT; q++){ //Making teams
 
         // making members of team
         for(i=0; i<numberM; i++){
@@ -76,16 +76,22 @@ function randomThisMem(){
         // teams
     let div = document.createElement('div')
     div.classList.add('col')
+    div.classList.add('bg-light')
+    div.classList.add('my-1')
+
     teams.appendChild(div)
+
         for(j=0; j<tempBase.length; j++){
             let parr = document.createElement('p')
             parr.innerText = tempBase[j]
         div.appendChild(parr)
         }
+
+    tempBase = []
     }
     console.log(tempBase)
     y =[]
-    tempBase = []
+
 }
 
 function randomTeam (){
