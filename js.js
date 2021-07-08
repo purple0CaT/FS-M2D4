@@ -56,10 +56,14 @@ let y =[]
 
 // randoming in teams
 function randomThisMem(){
-    numberM = memNum.value
-    randomaizer(memBase.length)
+    teams.innerHTML = ''
+    
     numberT = teamNum.value
     let tempBase = []
+    numberM = memNum.value
+
+    randomaizer(memBase.length)
+
 
     for(q=0; q<numberT; q++){ //Making teams
 
@@ -92,13 +96,6 @@ function randomThisMem(){
     console.log(tempBase)
     y =[]
 
-}
-
-function randomTeam (){
-    numberT = teamNum.value
-    for(i=0; i<numberT;i++){
-        
-    }
 }
 
 function randomaizer(b){
